@@ -56,7 +56,7 @@ class Help(Command):
 class Add(Command):
     def __init__(self):
         self.name = "add"
-        self.description = ""
+        self.description = "adds a task to a given day"
         self.usage = "[day] [description]"
         self.arg_num = 2
 
@@ -72,7 +72,7 @@ class Add(Command):
 class Remove(Command):
     def __init__(self):
         self.name = "remove"
-        self.description = ""
+        self.description = "removes a task from a given day"
         self.usage = "[day] [number]"
         self.arg_num = 2
 
@@ -92,7 +92,7 @@ class Remove(Command):
 class Finish(Command):
     def __init__(self):
         self.name = "finish"
-        self.description = ""
+        self.description = "finishes a task in a given day"
         self.usage = "[day] [number]"
         self.arg_num = 2
 
@@ -103,7 +103,7 @@ class Finish(Command):
 class Unfinish(Command):
     def __init__(self):
         self.name = "unfinish"
-        self.description = ""
+        self.description = "returns a given task to unfinished state"
         self.usage = "[day] [number]"
         self.arg_num = 2
 
@@ -114,7 +114,7 @@ class Unfinish(Command):
 class Fail(Command):
     def __init__(self):
         self.name = "fail"
-        self.description = ""
+        self.description = "fails a given task"
         self.usage = "[day] [number]"
         self.arg_num = 2
 
@@ -125,7 +125,7 @@ class Fail(Command):
 class List(Command):
     def __init__(self):
         self.name = "list"
-        self.description = ""
+        self.description = "lists all tasks in a given day"
         self.usage = "[day]"
         self.arg_num = 1
 

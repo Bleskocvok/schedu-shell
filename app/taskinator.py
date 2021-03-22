@@ -45,9 +45,12 @@ class Taskinator:
             return
         cmd = args[1]
         if cmd not in self.state.cmd_map:
-            self.state.print("ERROR: wrong arg")
+            self.state.print("ERROR: wrong arg, try 'help'")
             return
         if len(args) - 2 < self.state.cmd_map[cmd].arg_num:
+            usage = self.state.cmd_map[cmd].usage
+            self.state.print("ERROR: wrong number of parameters")
+            self.state.print(f"usage: {args[0]} {cmd} {usage}")
             return
         try:
             self.state.cmd_map[cmd].perform(self.state, args[2:])
