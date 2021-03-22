@@ -40,6 +40,9 @@ class Taskinator:
 
     def command(self, args: List[str]):
         transform_quotes(args)
+        if len(args) < 2:
+            self.state.print(f"ERROR: no argument, try:\n    {args[0]} help")
+            return
         cmd = args[1]
         if cmd not in self.state.cmd_map:
             self.state.print("ERROR: wrong arg")
