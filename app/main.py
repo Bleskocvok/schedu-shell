@@ -12,7 +12,7 @@ import sys
 def main():
     colorama.init()
 
-    data = Database("save.txt")
+    data = Database(".data")
     data.load()
     taks = Taskinator(data)
     taks.command(sys.argv)

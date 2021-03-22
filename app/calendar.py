@@ -57,8 +57,11 @@ def parse(input: str) -> Optional[Date]:
         return d
     map = {
         "today" : today,
+        "tod" : today,
         "tomorrow" : tomorrow,
+        "tom" : tomorrow,
         "yesterday" : yesterday,
+        "yest" : yesterday,
         # days of the week
         # "monday" : monday,
         # "mon" : monday,

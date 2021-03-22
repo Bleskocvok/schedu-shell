@@ -1,20 +1,9 @@
 
 
 from typing import List, Dict
-from enum import Enum
 import yaml
 
-
-class TaskState(Enum):
-    Todo = 0,
-    Completed = 1,
-    Failed = 2
-
-
-class Task:
-    def __init__(self, description: str, state: TaskState = TaskState.Todo):
-        self.description = description
-        self.state = state
+from task import Task
 
 
 class Database:
